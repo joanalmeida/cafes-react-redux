@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as appActions from '../actions/AppActions'
+import Login from '../components/Login'
 
 class App extends Component {
     componentDidMount() {
@@ -9,7 +10,12 @@ class App extends Component {
     }
 
     handleClick(e) {
+        e.preventDefault()
         this.props.appActions.logIn()
+    }
+
+    clickCoffe() {
+        this.props.appActions.addCoffe(1)
     }
 
     render() {
@@ -22,9 +28,12 @@ class App extends Component {
                     ?
                     <h1>Estas logueado</h1>
                     :
-                    <h1>Logueate plz</h1>
+                    <Login onSubmit={this.handleClick.bind(this)}/>
                 }
-                <button onClick={this.handleClick.bind(this)}>Log In</button>
+                <hr />
+                <div>
+                    <button onClick={this.clickCoffe.bind(this)}>Add Coffe</button>
+                </div>
             </div>
         )
     }
