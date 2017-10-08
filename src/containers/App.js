@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as appActions from '../actions/AppActions'
-import Login from '../components/Login'
+import Home from '../components/Home'
 
 class App extends Component {
     componentDidMount() {
         //this.props.appActions.logIn()
     }
 
-    handleClick(e) {
+    handleLogin(e) {
         e.preventDefault()
         this.props.appActions.logIn()
     }
@@ -23,6 +23,41 @@ class App extends Component {
 
         return (
             <div>
+                <section className="hero is-primary is-fullheight">
+                    {/* HEADER */}
+                    <div className="hero-head">
+                        <header className="nav">
+                            Navigation Header
+                        </header>
+                    </div>
+                    {/*BODY*/}
+                    <div className="hero-body">
+                        <div className="container has-text-centered">
+                            {
+                                isLoggedIn
+                                ?
+                                <p>Estas logueado, go to cafes</p>
+                                :
+                                <Home onLogin={this.handleLogin.bind(this)}/>
+                            }
+                        </div>
+                    </div>
+                    {/*FOOTER*/}
+                    <div className="hero-foot">
+                        <nav className="tabs is-boxed is-fullwidth">
+                            <div className="container">
+                                <ul>
+                                    <li><a>Test</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </section>
+            </div>
+        )
+
+        /*
+        <div>
                 {
                     isLoggedIn
                     ?
@@ -35,7 +70,7 @@ class App extends Component {
                     <button onClick={this.clickCoffe.bind(this)}>Add Coffe</button>
                 </div>
             </div>
-        )
+            */
     }
 }
 

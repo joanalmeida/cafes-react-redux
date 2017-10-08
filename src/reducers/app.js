@@ -4,7 +4,7 @@ const ADD_COFFE_TO_CART = 'ADD_COFFE_TO_CART'
 
 const initialState = {
     isLoggedIn: false,
-    cart: []
+    cart: [1, 2, 3]
 }
 
 export default function user(state = initialState, action) {
