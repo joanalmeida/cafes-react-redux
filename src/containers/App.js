@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as appActions from '../actions/AppActions'
 import Home from '../components/Home'
+import MainPage from '../containers/MainPage'
 
 class App extends Component {
     componentDidMount() {
@@ -15,7 +16,8 @@ class App extends Component {
     }
 
     clickCoffe() {
-        this.props.appActions.addCoffe(1)
+        //this.props.appActions.addCoffe(1)
+        console.log("Clicked add coffee");
     }
 
     render() {
@@ -36,7 +38,7 @@ class App extends Component {
                             {
                                 isLoggedIn
                                 ?
-                                <p>Estas logueado, go to cafes</p>
+                                <MainPage />
                                 :
                                 <Home onLogin={this.handleLogin.bind(this)}/>
                             }
