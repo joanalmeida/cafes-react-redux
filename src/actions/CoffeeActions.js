@@ -1,13 +1,13 @@
-export function addCoffe(coffeId) {
+export function addCoffe(coffeeId) {
     return {
         type: 'ADD_COFFEE_TO_CART',
-        coffeId
+        coffeeId
     }
 }
 
-export function removeCoffee(coffeId) {
+export function removeCoffee(coffeeId) {
     return {
         type: 'REMOVE_COFFEE_FROM_CART',
-        coffeId
+        coffeeId
     }
 }

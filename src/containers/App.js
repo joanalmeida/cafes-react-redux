@@ -3,7 +3,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as appActions from '../actions/AppActions'
 import Home from '../components/Home'
-import MainPage from '../containers/MainPage'
+//import MainPage from '../containers/MainPage'
+import MainPage from '../components/MainPage'
 
 class App extends Component {
     componentDidMount() {
