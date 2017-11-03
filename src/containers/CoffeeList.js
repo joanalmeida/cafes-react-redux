@@ -10,11 +10,7 @@ class CoffeeList extends Component {
             return this.props.coffees[coffeeID]
         })
         */
-
-        let { coffeeList, coffees } = this.props.all
-        let list = coffeeList.map(coffeeID => {
-            return coffees[coffeeID]
-        })
+        let list = Object.values(this.props.coffees)
 
         return (
             <div>
@@ -33,14 +29,9 @@ class CoffeeList extends Component {
 
 
 function mapStateToProps(state) {
-    /*
     return {
         list: state.coffee.coffeeList,
         coffees: state.coffee.coffees
-    }
-    */
-    return {
-        all: state.coffee
     }
 }
 

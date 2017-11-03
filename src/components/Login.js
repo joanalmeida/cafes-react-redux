@@ -20,12 +20,4 @@ const Login = ( {onSubmit} ) => (
     </div>
 )
 
-/*
-<form onSubmit={onSubmit}>
-            <input type="text" placeholder="username" />
-            <input type="password" placeholder="password" />
-            <button>Log In</button>
-        </form>
-        */
-
 export default Login

@@ -3,8 +3,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as appActions from '../actions/AppActions'
 import Home from '../components/Home'
-//import MainPage from '../containers/MainPage'
-import MainPage from '../components/MainPage'
+import MainPage from '../containers/MainPage'
+//import MainPage from '../components/MainPage'
 
 class App extends Component {
     componentDidMount() {
@@ -14,11 +14,6 @@ class App extends Component {
     handleLogin(e) {
         e.preventDefault()
         this.props.appActions.logIn()
-    }
-
-    clickCoffe() {
-        //this.props.appActions.addCoffe(1)
-        console.log("Clicked add coffee");
     }
 
     render() {
@@ -58,22 +53,6 @@ class App extends Component {
                 </section>
             </div>
         )
-
-        /*
-        <div>
-                {
-                    isLoggedIn
-                    ?
-                    <h1>Estas logueado</h1>
-                    :
-                    <Login onSubmit={this.handleClick.bind(this)}/>
-                }
-                <hr />
-                <div>
-                    <button onClick={this.clickCoffe.bind(this)}>Add Coffe</button>
-                </div>
-            </div>
-            */
     }
 }
 

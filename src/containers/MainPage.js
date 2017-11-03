@@ -3,7 +3,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as coffeeActions from '../actions/CoffeeActions'
 import CoffeeList from '../components/CoffeeList'
-import Cart from '../components/Cart'
+//import Cart from '../components/Cart'
+import Cart from './Cart'
 
 class MainPage extends Component {
     clickCoffeeList(id) {
@@ -11,13 +12,7 @@ class MainPage extends Component {
     }
 
     render() {
-        let { coffeeList, coffees, cart } = this.props.coffeeGral
-        let list = coffeeList.map(coffeeID => {
-            return coffees[coffeeID]
-        })
-        let cartList = cart.map(coffeeID => {
-            return coffees[coffeeID]
-        })
+        let list = Object.values(this.props.coffees)
 
         return (
             <div className="columns">
@@ -25,7 +20,7 @@ class MainPage extends Component {
                     <CoffeeList list={list} onClick={this.clickCoffeeList.bind(this)}/>
                 </div>
                 <div className="column is-4">
-                    <Cart list={cartList} />
+                    <Cart coffees={this.props.coffees} />
                 </div>
             </div>
         )
@@ -34,7 +29,7 @@ class MainPage extends Component {
 
 function mapStateToProps(state) {
     return {
-        coffeeGral: state.coffee
+        coffees: state.coffee.coffees
     }
 }
 

@@ -20,10 +20,15 @@ export default function cafes(state = initialState, action = {}) {
     let cart;
     switch(action.type) {
         case ADD_COFFEE_TO_CART:
-            cart = state.cart.concat(action.coffeeId)
-            return {
-                ...state,
-                cart
+            let exist = state.cart.filter(elem => { return elem.id === action.coffeeId })
+            if(exist.length > 0) {
+                return state
+            } else {
+                cart = state.cart.concat({id: action.coffeeId, qty: 1})
+                return {
+                    ...state,
+                    cart
+                }
             }
 
         case REMOVE_COFFEE_FROM_CART:
