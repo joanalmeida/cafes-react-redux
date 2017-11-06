@@ -2,12 +2,13 @@ const ADD_COFFEE_TO_CART = 'ADD_COFFEE_TO_CART'
 const REMOVE_COFFEE_FROM_CART = 'REMOVE_COFFEE_FROM_CART'
 const REQUEST_COFFEES = 'REQUEST_COFFEES'
 const RECEIVE_COFFEES = 'RECEIVE_COFFEES'
+const PLUS_ONE_COFFEE = 'PLUS_ONE_COFFEE'
+const MINUS_ONE_COFFEE = 'MINUS_ONE_COFFEE'
 
 const initialState = {
     fetchingCoffees: false,
     cart: [],
-    coffees: {},
-    coffeeList: [1, 2]
+    coffees: {}
 }
 
 export default function cafes(state = initialState, action = {}) {
@@ -44,12 +45,35 @@ export default function cafes(state = initialState, action = {}) {
             }
 
         case REMOVE_COFFEE_FROM_CART:
-            cart = state.cart.filter(elem => {return elem !== action.coffeeId})
+            cart = state.cart.filter(elem => { return elem._id !== action.coffeeId })
             return {
                 ...state,
                 cart
             }
 
+        case PLUS_ONE_COFFEE:
+            cart = state.cart.map(elem => { 
+                if(elem._id === action.coffeeId) {
+                    elem = {...elem, qty: elem.qty+1}
+                }
+                return elem
+            })
+            return {
+                ...state,
+                cart
+            }
+
+        case MINUS_ONE_COFFEE:
+            cart = state.cart.map(elem => {
+                if(elem.qty > 1 && elem._id === action.coffeeId) {
+                    elem = {...elem, qty: elem.qty-1}
+                }
+                return elem
+            })
+            return {
+                ...state,
+                cart
+            }
 
         default:
             return state

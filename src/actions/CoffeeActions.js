@@ -1,5 +1,19 @@
 import axios from "axios"
 
+export function plusOne(coffeeId) {
+    return {
+        type: 'PLUS_ONE_COFFEE',
+        coffeeId
+    }
+}
+
+export function minusOne(coffeeId) {
+    return {
+        type: 'MINUS_ONE_COFFEE',
+        coffeeId
+    }
+}
+
 export function addCoffe(coffeeId) {
     return {
         type: 'ADD_COFFEE_TO_CART',

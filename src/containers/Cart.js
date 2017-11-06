@@ -8,6 +8,14 @@ class Cart extends Component {
         this.props.coffeeActions.removeCoffee(id)
     }
 
+    plusOne(id) {
+        this.props.coffeeActions.plusOne(id)
+    }
+
+    minusOne(id) {
+        this.props.coffeeActions.minusOne(id)
+    }
+
     render() {
         let cartList = this.props.cart.map(coffee => {
             return {
@@ -23,9 +31,11 @@ class Cart extends Component {
                     {
                         cartList.map(coffee => {
                             return (
-                                <li key={coffee._id} onClick={() => {this.removeCoffee(coffee._id)}}>
+                                <li key={coffee._id}>
                                     {coffee.name} - Qty: {coffee.qty}
-                                    <img src={coffee.img} alt="Coffee category"/>
+                                    <img src={coffee.img} alt="Coffee category" onClick={() => {this.removeCoffee(coffee._id)}}/>
+                                    <button onClick={() => {this.plusOne(coffee._id)}}>Add</button>
+                                    <button onClick={() => {this.minusOne(coffee._id)}}>Del</button>
                                 </li>
                             )
                         })
