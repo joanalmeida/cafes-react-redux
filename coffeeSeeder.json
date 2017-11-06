@@ -1,0 +1,20 @@
+{"_id": "1", "name": "Americano", "img": "img/americano.png", "description": "Description test"}
+{"_id": "2", "name": "Cafe au Lait", "img": "img/cafe_au_lait.png", "description": "Description test"}
+{"_id": "3", "name": "Cappuccino", "img": "img/cappuccino.png", "description": "Description test"}
+{"_id": "4", "name": "Catuai do Brasil", "img": "img/catuai_do_brasil.png", "description": "Description test"}
+{"_id": "5", "name": "Chai tea Latte", "img": "img/chai_tea_latte.png", "description": "Description test"}
+{"_id": "6", "name": "Chococino Caramel", "img": "img/chococino_caramel.png", "description": "Description test"}
+{"_id": "7", "name": "Chococino", "img": "img/chococino.png", "description": "Description test"}
+{"_id": "8", "name": "Cortado", "img": "img/cortado.png", "description": "Description test"}
+{"_id": "9", "name": "Espresso Caramel", "img": "img/espresso_caramel.png", "description": "Description test"}
+{"_id": "10", "name": "Espresso Intenso", "img": "img/espresso_intenso.png", "description": "Description test"}
+{"_id": "11", "name": "Espresso", "img": "img/espresso.png", "description": "Description test"}
+{"_id": "12", "name": "Latte Macchiato", "img": "img/latte_macchiato.png", "description": "Description test"}
+{"_id": "13", "name": "Lungo Descafeinado", "img": "img/lungo_descafeinado.png", "description": "Description test"}
+{"_id": "14", "name": "Lungo", "img": "img/lungo.png", "description": "Description test"}
+{"_id": "15", "name": "Macchiato Skynny", "img": "img/macchiato_skinny.png", "description": "Description test"}
+{"_id": "16", "name": "Macchiato Vainilla", "img": "img/macchiato_vainilla.png", "description": "Description test"}
+{"_id": "17", "name": "Mocha", "img": "img/mocha.png", "description": "Description test"}
+{"_id": "18", "name": "Nesquik", "img": "img/nesquik.png", "description": "Description test"}
+{"_id": "19", "name": "Ristretto Ardenza", "img": "img/ristretto_ardenza.png", "description": "Description test"}
+{"_id": "20", "name": "Ristretto", "img": "img/ristretto.png", "description": "Description test"}
