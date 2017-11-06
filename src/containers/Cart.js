@@ -11,7 +11,7 @@ class Cart extends Component {
     render() {
         let cartList = this.props.cart.map(coffee => {
             return {
-                ...this.props.coffees[coffee.id],
+                ...this.props.coffees[coffee._id],
                 qty: coffee.qty
             }
         })
@@ -23,8 +23,9 @@ class Cart extends Component {
                     {
                         cartList.map(coffee => {
                             return (
-                                <li key={coffee.id} onClick={() => {this.removeCoffee(coffee.id)}}>
+                                <li key={coffee._id} onClick={() => {this.removeCoffee(coffee._id)}}>
                                     {coffee.name} - Qty: {coffee.qty}
+                                    <img src={coffee.img} alt="Coffee category"/>
                                 </li>
                             )
                         })

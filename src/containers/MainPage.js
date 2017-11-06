@@ -7,6 +7,10 @@ import CoffeeList from '../components/CoffeeList'
 import Cart from './Cart'
 
 class MainPage extends Component {
+    componentDidMount() {
+        this.props.coffeeActions.fetchCoffees()
+    }
+
     clickCoffeeList(id) {
         this.props.coffeeActions.addCoffe(id)
     }
@@ -17,10 +21,22 @@ class MainPage extends Component {
         return (
             <div className="columns">
                 <div className="column is-8">
-                    <CoffeeList list={list} onClick={this.clickCoffeeList.bind(this)}/>
+                    {
+                        this.props.fetchingCoffees
+                        ?
+                        <h3>Cargando...</h3>
+                        :
+                        <CoffeeList list={list} onClick={this.clickCoffeeList.bind(this)}/>
+                    }
                 </div>
                 <div className="column is-4">
-                    <Cart coffees={this.props.coffees} />
+                    {
+                        this.props.fetchingCoffees
+                        ?
+                        <h3>Cargando...</h3>
+                        :
+                        <Cart coffees={this.props.coffees} />
+                    }
                 </div>
             </div>
         )
@@ -29,7 +45,8 @@ class MainPage extends Component {
 
 function mapStateToProps(state) {
     return {
-        coffees: state.coffee.coffees
+        coffees: state.coffee.coffees,
+        fetchingCoffees: state.coffee.fetchingCoffees
     }
 }
 

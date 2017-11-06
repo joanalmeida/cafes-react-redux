@@ -21,7 +21,7 @@ class App extends Component {
 
         return (
             <div>
-                <section className="hero is-primary is-fullheight">
+                <section className="hero is-primary is-fullheight app">
                     {/* HEADER */}
                     <div className="hero-head">
                         <header className="nav">
