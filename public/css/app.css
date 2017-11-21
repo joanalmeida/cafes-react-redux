@@ -3,3 +3,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.promo-img {
+    border: 10px solid #FFF;
+    border-radius: 10px;
+}

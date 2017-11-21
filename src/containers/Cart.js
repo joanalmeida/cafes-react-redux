@@ -2,8 +2,18 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as coffeeActions from '../actions/CoffeeActions'
+import * as orderActions from '../actions/OrderActions'
 
 class Cart extends Component {
+    constructor(props) {
+        super(props);
+        this.addOrder = this.addOrder.bind(this);
+    }
+
+    addOrder() {
+        this.props.orderActions.addOrder({user: 1, coffee: this.props.cart})
+    }
+
     removeCoffee(id) {
         this.props.coffeeActions.removeCoffee(id)
     }
@@ -41,6 +51,7 @@ class Cart extends Component {
                         })
                     }
                 </ul>
+                <button onClick={this.addOrder}>Order</button>
             </div>
         )
     }
@@ -54,7 +65,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        coffeeActions: bindActionCreators(coffeeActions, dispatch)
+        coffeeActions: bindActionCreators(coffeeActions, dispatch),
+        orderActions: bindActionCreators(orderActions, dispatch)
     }
 }
 

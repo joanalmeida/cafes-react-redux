@@ -3,7 +3,6 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as coffeeActions from '../actions/CoffeeActions'
 import CoffeeList from '../components/CoffeeList'
-//import Cart from '../components/Cart'
 import Cart from './Cart'
 
 class MainPage extends Component {
