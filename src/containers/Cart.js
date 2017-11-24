@@ -37,16 +37,19 @@ class Cart extends Component {
         return (
             <div>
                 <h1>El carrito</h1>
-                <ul>
+                <ul className="list-group">
                     {
                         cartList.map(coffee => {
                             return (
-                                <li key={coffee._id}>
-                                    {coffee.name} - Qty: {coffee.qty}
+                                <li key={coffee._id} className="list-group-item d-flex justify-content-between align-items-center">
+                                    {coffee.name}
+                                    <span className="badge badge-primary badge-pill">{coffee.qty}</span>
+                                </li>
+                                    /*
                                     <img src={coffee.img} alt="Coffee category" onClick={() => {this.removeCoffee(coffee._id)}}/>
                                     <button onClick={() => {this.plusOne(coffee._id)}}>Add</button>
                                     <button onClick={() => {this.minusOne(coffee._id)}}>Del</button>
-                                </li>
+                                    */
                             )
                         })
                     }

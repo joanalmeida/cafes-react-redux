@@ -15,27 +15,45 @@ class MainPage extends Component {
     }
 
     render() {
-        let list = Object.values(this.props.coffees)
+        let list = Object.values(this.props.coffees);
 
         return (
-            <div className="columns">
-                <div className="column is-8">
-                    {
-                        this.props.fetchingCoffees
-                        ?
-                        <h3>Cargando...</h3>
-                        :
-                        <CoffeeList list={list} onClick={this.clickCoffeeList.bind(this)}/>
-                    }
-                </div>
-                <div className="column is-4">
-                    {
-                        this.props.fetchingCoffees
-                        ?
-                        <h3>Cargando...</h3>
-                        :
-                        <Cart coffees={this.props.coffees} />
-                    }
+            <div className="full-height">
+                {/* HEADER - NAV */}
+                <nav className="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar bg-special-color">
+                    <div className="container">
+                        <a className="navbar-brand"><img src="img/logo_transparente.png" alt="logo sondeos"/></a>
+                        <div className="collapse navbar-collapse">
+                            <ul className="navbar-nav left">
+                                <li className="nav-item"><a className="nav-link">Pedido Actual</a></li>
+                                <li className="nav-item"><a className="nav-link">Mis pedidos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div id="test">
+                    <div className="container main-content">
+                        <div className="row">
+                            <div className="col-9">
+                                {
+                                    this.props.fetchingCoffees
+                                    ?
+                                    <h3>Cargando...</h3>
+                                    :
+                                    <CoffeeList list={list} onClick={this.clickCoffeeList.bind(this)}/>
+                                }
+                            </div>
+                            <div className="col-3 ml-auto">
+                                {
+                                    this.props.fetchingCoffees
+                                    ?
+                                    <h3>Cargando...</h3>
+                                    :
+                                    <Cart coffees={this.props.coffees} />
+                                }
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

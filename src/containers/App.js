@@ -19,37 +19,14 @@ class App extends Component {
         let { isLoggedIn } = this.props.app
 
         return (
-            <div>
-                <section className="hero is-primary is-fullheight app">
-                    {/* HEADER */}
-                    <div className="hero-head">
-                        <header className="nav">
-                            Navigation Header
-                        </header>
-                    </div>
-                    {/*BODY*/}
-                    <div className="hero-body">
-                        <div className="container has-text-centered">
-                            {
-                                isLoggedIn
-                                ?
-                                <MainPage />
-                                :
-                                <Home onLogin={this.handleLogin.bind(this)}/>
-                            }
-                        </div>
-                    </div>
-                    {/*FOOTER*/}
-                    <div className="hero-foot">
-                        <nav className="tabs is-boxed is-fullwidth">
-                            <div className="container">
-                                <ul>
-                                    <li><a>Test</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </section>
+            <div id="app">
+                {
+                    isLoggedIn
+                    ?
+                    <MainPage />
+                    :
+                    <Home onLogin={this.handleLogin.bind(this)} />
+                }
             </div>
         )
     }

@@ -8,3 +8,146 @@
     border: 10px solid #FFF;
     border-radius: 10px;
 }
+
+.bottom-grey-border {
+    border-bottom: 1px solid lightgrey;
+}
+
+/* TEMPLATE STYLES */
+        
+html,
+body,
+.view,
+#root,
+#app {
+    height: 100%;
+}
+/* Navigation*/
+
+.navbar {
+    background-color: transparent;
+}
+
+.scrolling-navbar {
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.top-nav-collapse {
+    background-color: #1C2331;
+}
+
+footer.page-footer {
+    background-color: #1C2331;
+    margin-top: -1px;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #1C2331;
+    }
+}
+.navbar .btn-group .dropdown-menu a:hover {
+    color: #000 !important;
+}
+.navbar .btn-group .dropdown-menu a:active {
+    color: #fff !important;
+}
+/*Call to action*/
+
+.flex-center {
+    color: #fff;
+}
+
+.view {
+    background: url('http://whereis.gatrooms.com/wp-content/uploads/2017/03/distrikt-coffee-stilinberlin-4998.jpg')no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: visible;
+}
+
+.left {
+    margin-left: auto;
+}
+
+input::placeholder {
+    color: white;
+}
+
+.card.card-dark .card-body {
+    background-color: #2E2E2E;
+}
+
+.card.card-dark hr {
+    background-color: #666;
+}
+
+.activator {
+    position: absolute;
+    top: -18px;
+    right: 0;
+    padding: 1rem;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    background-color: #badc14;
+}
+
+.activator i{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#test {
+    color: #FFF;
+    background-color: rgba(0,0,0,.3);
+    min-height: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.bg-special-color {
+    background-color: #2e2e2e;
+}
+
+.main-content {
+    padding-bottom: 20px;
+    padding-top: 125px;
+}
+
+.card {
+    width: 215px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    min-height: 56px;
+}
+
+.list-group {
+    color: black;
+}

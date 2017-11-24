@@ -1,16 +1,44 @@
 import React from 'react'
-import Login from './Login'
+//import Login from './Login'
 
 const Home = ( {onLogin} ) => (
     <div>
-        <div className="columns is-vcentered">
-            <div className="column is-5">
-                <figure className="image is-4by3">
-                    <img alt="Imagen promocional" className="promo-img" src="https://image.spreadshirtmedia.com/image-server/v1/mp/compositions/P1019458374MPC1030099918/views/1,width=300,height=300,appearanceId=2,backgroundColor=E8E8E8,version=1497260021/i-turn-coffee-into-code-t-shirts-men-s-premium-t-shirt.jpg" />
-                </figure>
+        {/* HEADER - NAV */}
+        <nav className="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar bg-special-color">
+            <div className="container">
+                <a className="navbar-brand"><img src="img/logo_transparente.png" alt="logo sondeos"/></a>
+                <div className="collapse navbar-collapse">
+                    <ul className="navbar-nav left">
+                        <li className="nav-item"><a className="nav-link">Pedido Actual</a></li>
+                        <li className="nav-item"><a className="nav-link">Mis pedidos</a></li>
+                    </ul>
+                </div>
             </div>
-            <div className="column is-5 is-offset-1">
-                <Login onSubmit={onLogin} />
+        </nav>
+        <div className="hm-black-light">
+            <div className="full-bg-img flex-center">
+                <div className="row">
+                    <div className="col">
+                        <form>
+                            <p className="h5 text-center mb-4">Sign in</p>
+                            <div className="md-form">
+                                <i className="fa fa-envelope prefix"></i>
+                                <input onFocus={() => {document.getElementById('emailLabel').classList.add('active')}} type="text" id="defaultForm-email" className="form-control white-text" />
+                                <label id="emailLabel" className="text-white" htmlFor="defaultForm-email">Your email</label>
+                            </div>
+
+                            <div className="md-form">
+                                <i className="fa fa-lock prefix"></i>
+                                <input onFocus={() => {document.getElementById('passLabel').classList.add('active')}} type="password" id="defaultForm-pass" className="form-control white-text" />
+                                <label id="passLabel" className="text-white" htmlFor="defaultForm-pass">Your password</label>
+                            </div>
+
+                            <div className="text-center">
+                                <button className="btn btn-default" onClick={onLogin}>Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
