@@ -37,24 +37,29 @@ class Cart extends Component {
         return (
             <div>
                 <h1>El carrito</h1>
-                <ul className="list-group">
+                <div className="list-group">
                     {
                         cartList.map(coffee => {
                             return (
-                                <li key={coffee._id} className="list-group-item d-flex justify-content-between align-items-center">
-                                    {coffee.name}
-                                    <span className="badge badge-primary badge-pill">{coffee.qty}</span>
-                                </li>
-                                    /*
-                                    <img src={coffee.img} alt="Coffee category" onClick={() => {this.removeCoffee(coffee._id)}}/>
-                                    <button onClick={() => {this.plusOne(coffee._id)}}>Add</button>
-                                    <button onClick={() => {this.minusOne(coffee._id)}}>Del</button>
-                                    */
+                                <div key={coffee._id} className="list-group-item">
+                                    <div className="media">
+                                        <img className="d-flex mr-3" src={"img/thumbnail/" + coffee.img} alt="placeholder"/>
+                                        <div className="media-body">
+                                            <h6>
+                                                {coffee.name}
+                                                <i onClick={() => {this.removeCoffee(coffee._id)}} className="fa fa-close float-right clickable" aria-hidden="true"></i>
+                                                <span className="badge badge-primary badge-pill float-right mr-10">{coffee.qty}</span>
+                                            </h6>
+                                            <a onClick={() => {this.plusOne(coffee._id)}} className="link-carrito plus"><i className="fa fa-plus"></i></a>
+                                            <a onClick={() => {this.minusOne(coffee._id)}} className="link-carrito"><i className="fa fa-minus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
                             )
-                        })
+                        }) 
                     }
-                </ul>
-                <button onClick={this.addOrder}>Order</button>
+                </div>
+                <div><button type="button" className="btn btn-elegant" onClick={this.addOrder}>Pedir</button></div>
             </div>
         )
     }

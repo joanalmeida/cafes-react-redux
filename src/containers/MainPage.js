@@ -31,10 +31,10 @@ class MainPage extends Component {
                         </div>
                     </div>
                 </nav>
-                <div id="test">
+                <div id="black-div">
                     <div className="container main-content">
                         <div className="row">
-                            <div className="col-9">
+                            <div className="col-8">
                                 {
                                     this.props.fetchingCoffees
                                     ?
@@ -43,7 +43,7 @@ class MainPage extends Component {
                                     <CoffeeList list={list} onClick={this.clickCoffeeList.bind(this)}/>
                                 }
                             </div>
-                            <div className="col-3 ml-auto">
+                            <div className="col-4">
                                 {
                                     this.props.fetchingCoffees
                                     ?

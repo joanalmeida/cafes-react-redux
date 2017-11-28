@@ -3,7 +3,7 @@ import Coffee from './Coffee'
 
 const CoffeeList = ( {list, onClick} ) => (
     <div>
-        <h1>La lista de Cafes</h1>
+        <h1>Cafes disponibles</h1>
         <div className="row">
             {
                 list.map(coffee => {

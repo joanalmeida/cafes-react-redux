@@ -1,20 +1,20 @@
-{"_id": "1", "name": "Americano", "img": "img/americano.png", "description": "Description test"}
-{"_id": "2", "name": "Cafe au Lait", "img": "img/cafe_au_lait.png", "description": "Description test"}
-{"_id": "3", "name": "Cappuccino", "img": "img/cappuccino.png", "description": "Description test"}
-{"_id": "4", "name": "Catuai do Brasil", "img": "img/catuai_do_brasil.png", "description": "Description test"}
-{"_id": "5", "name": "Chai tea Latte", "img": "img/chai_tea_latte.png", "description": "Description test"}
-{"_id": "6", "name": "Chococino Caramel", "img": "img/chococino_caramel.png", "description": "Description test"}
-{"_id": "7", "name": "Chococino", "img": "img/chococino.png", "description": "Description test"}
-{"_id": "8", "name": "Cortado", "img": "img/cortado.png", "description": "Description test"}
-{"_id": "9", "name": "Espresso Caramel", "img": "img/espresso_caramel.png", "description": "Description test"}
-{"_id": "10", "name": "Espresso Intenso", "img": "img/espresso_intenso.png", "description": "Description test"}
-{"_id": "11", "name": "Espresso", "img": "img/espresso.png", "description": "Description test"}
-{"_id": "12", "name": "Latte Macchiato", "img": "img/latte_macchiato.png", "description": "Description test"}
-{"_id": "13", "name": "Lungo Descafeinado", "img": "img/lungo_descafeinado.png", "description": "Description test"}
-{"_id": "14", "name": "Lungo", "img": "img/lungo.png", "description": "Description test"}
-{"_id": "15", "name": "Macchiato Skynny", "img": "img/macchiato_skinny.png", "description": "Description test"}
-{"_id": "16", "name": "Macchiato Vainilla", "img": "img/macchiato_vainilla.png", "description": "Description test"}
-{"_id": "17", "name": "Mocha", "img": "img/mocha.png", "description": "Description test"}
-{"_id": "18", "name": "Nesquik", "img": "img/nesquik.png", "description": "Description test"}
-{"_id": "19", "name": "Ristretto Ardenza", "img": "img/ristretto_ardenza.png", "description": "Description test"}
-{"_id": "20", "name": "Ristretto", "img": "img/ristretto.png", "description": "Description test"}
+{"_id": "1", "name": "Americano", "img": "americano.png", "description": "El clásico sabor de un café tostado."}
+{"_id": "2", "name": "Cafe au Lait", "img": "cafe_au_lait.png", "description": "Disfrutá del clásico y delicioso café con leche, ¡y en una sola cápsula!"}
+{"_id": "3", "name": "Cappuccino", "img": "cappuccino.png", "description": "Un toque de rico espresso, coronado con deliciosa y espumosa leche al vapor."}
+{"_id": "4", "name": "Catuai do Brasil", "img": "catuai_do_brasil.png", "description": "Un café corto (50ml), delicadamente tostado con sutiles notas a miel y violetas, y una gran crema aterciopelada. Intensidad 4/11."}
+{"_id": "5", "name": "Chai tea Latte", "img": "chai_tea_latte.png", "description": "Un té para conectar con tu 'yo' interior. Atrevete a probarla y sentí la más sorprendente experiencia que una máquina de café puede ofrecer."}
+{"_id": "6", "name": "Chococino Caramel", "img": "chococino_caramel.png", "description": "Una combinación para los más golosos: cremoso chocolate y caramelo cubierto por una generosa crema."}
+{"_id": "7", "name": "Chococino", "img": "chococino.png", "description": "Un chocolate caliente increíble, intenso e inolvidable hecho con auténticos granos de cacao."}
+{"_id": "8", "name": "Cortado", "img": "cortado.png", "description": "Un delicioso café de rico aroma con un toque de leche para cualquier momento, todos los días."}
+{"_id": "9", "name": "Espresso Caramel", "img": "espresso_caramel.png", "description": "La deliciosa intensidad del espresso con un toque dulce de caramelo."}
+{"_id": "10", "name": "Espresso Intenso", "img": "espresso_intenso.png", "description": "Un café espresso con fuerte aroma, carácter y un sabor muy intenso, recubierto por una suave capa de crema."}
+{"_id": "11", "name": "Espresso", "img": "espresso.png", "description": "Toda la fuerza de un café intenso atrapado en una pequeña taza, y saborealo con un toque de crema gracias a la presión profesional de 15 bares."}
+{"_id": "12", "name": "Latte Macchiato", "img": "latte_macchiato.png", "description": "Un suave espresso de gran cuerpo en una perfecta combinación con una deliciosa y espumosa leche al vapor, ligeramente endulzada."}
+{"_id": "13", "name": "Lungo Descafeinado", "img": "lungo_descafeinado.png", "description": "Un café sin cafeína para tomar largo, con el mismo aroma y sabor gracias al proceso natural de descafeinización con agua."}
+{"_id": "14", "name": "Lungo", "img": "lungo.png", "description": "Una gran taza de café con cuerpo e intenso aroma, coronado con una suave capa de crema."}
+{"_id": "15", "name": "Macchiato Skynny", "img": "macchiato_skinny.png", "description": "Un delicioso Latte Macchiato con leche descremada."}
+{"_id": "16", "name": "Macchiato Vainilla", "img": "macchiato_vainilla.png", "description": "El conocido Latte Macchiato de siempre, con su leche cremosa y café 100% arábica pero con un delicioso sabor a vainilla. Es ideal para disfrutar de unos instantes de tranquilidad."}
+{"_id": "17", "name": "Mocha", "img": "mocha.png", "description": "Deliciosa bebida que combina el sabor del café con la dulzura del chocolate y leche espumosa."}
+{"_id": "18", "name": "Nesquik", "img": "nesquik.png", "description": "¡Prepará tu Nesquik de siempre, de una manera sencilla y rápida!"}
+{"_id": "19", "name": "Ristretto Ardenza", "img": "ristretto_ardenza.png", "description": "El clásico espresso elevado a otro nivel Oscuro, intenso y con maravillosos aromas a avellanas y regaliz."}
+{"_id": "20", "name": "Ristretto", "img": "ristretto.png", "description": "Un café espresso equilibrado, afrutado y aromático. Ideal para tomar corto."}
